@@ -1,5 +1,15 @@
+import { useState } from "react";
+import { Game } from "./Game";
+import { Start } from "./Start";
+
 function App() {
-  return <div>A Pong Game</div>;
+  const [playing, setIsPlaying] = useState(false);
+
+  if (playing) {
+    return <Game />;
+  } else {
+    return <Start />;
+  }
 }
 
 export default App;
